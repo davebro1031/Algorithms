@@ -9,7 +9,6 @@ const split = (arr) => {
     const splitPoint = Math.floor(arr.length / 2)
     const arr1 = arr.slice(0, splitPoint)
     const arr2 = arr.slice(splitPoint)
-    console.log(splitPoint)
     return [arr1, arr2]
 }
 
