@@ -1,10 +1,9 @@
 const merge = (arr1, arr2) => {
     const merged = []
-    while(arr1.length && arr2.length){
-        merged.push( arr1[0] < arr2[0] ? arr1.shift() : arr2.shift())
-    }
-    merged.push(arr1.length ? arr1 : arr2)
-    return merged.flat()
+    while(arr1.length && arr2.length)merged.push( arr1[0] < arr2[0] ? arr1.shift() : arr2.shift())
+    merged.push(...arr1)
+    merged.push(...arr2)
+    return merged
 }
 
-console.log(merge([1,1,3,7,9,11], [1,2,3,4,6,8,10,11,12,13,14]))
+console.log(merge([1,1,2,3,6,9,10], [1,1,2,2,3,3,4,5,8,10,11,12,13,13]))
