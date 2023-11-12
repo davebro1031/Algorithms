@@ -12,7 +12,16 @@ const merge = (A, p, q, r) => {
     let j = 0
     for (k = p; k <= r; k++) A[k] = (L[i] < R[j] ? L[i++] : R[j++])
 }
-let arr = [0, 1, 2, 3, 4, 5, 6, 1, 3, 5, 10, 11, 12, 13, 14, 15]
-merge(arr, 3, 6, 9)
+
+const mergeSort = (A, p, r) => {
+    if(p < r) {
+        const q = Math.floor((p + r)/2)
+        mergeSort(A, p, q)
+        mergeSort(A, q+1, r)
+        merge(A, p, q, r)
+    }
+}
+
+
 
 console.log(arr)
