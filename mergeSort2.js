@@ -10,13 +10,7 @@ const merge = (A, p, q, r) => {
 
     let i = 0
     let j = 0
-    for (k = p; k <= r; k++) {
-        if (L[i] < R[j]) {
-            A[k] = L[i++]
-        } else {
-            A[k] = R[j++]
-        }
-    }
+    for (k = p; k <= r; k++) A[k] = (L[i] < R[j] ? L[i++] : R[j++])
 }
 let arr = [0, 1, 2, 3, 4, 5, 6, 1, 3, 5, 10, 11, 12, 13, 14, 15]
 merge(arr, 3, 6, 9)
