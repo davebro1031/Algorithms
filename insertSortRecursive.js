@@ -34,7 +34,10 @@ const insert2 = (arr, n) => {
 }
 
 const insertSortRecursive2 = (arr, n) => {
-    if (n > 1) insert2(insertSortRecursive2(arr, n - 1), n - 1)
+    if (n > 1) {
+        insertSortRecursive2(arr, n - 1)
+        insert2(arr, n-1)
+    }
 }
 
 insertSortRecursive2(arr, arr.length)
