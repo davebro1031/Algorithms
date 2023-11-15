@@ -3,9 +3,9 @@ const binarySearch = (arr, p, r, n) => {
     const q = Math.floor((p + r) / 2)
     if (arr[q] === n) return q
     if (arr[q] < n) {
-        binarySearch(arr, p, q, n)
+        binarySearch(arr, p, q - 1, n)
     } else {
-        binarySearch(arr, q, r, n)
+        binarySearch(arr, q + 1, r, n)
     }
 }
 
