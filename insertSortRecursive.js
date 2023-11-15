@@ -22,3 +22,19 @@ const insertSortRecursive = (arr) => {
 let arr = [2, 5, 8, 1, 3, 5, 2, 4, 9, 2, 1]
 arr = insertSortRecursive(arr)
 console.log(arr)
+
+const insert2 = (arr, n) => {
+    const key = arr[n]
+    let j = n - 1
+    while(key < arr[j]){
+        arr[j+1] = arr[j]
+        arr[j--] = key
+    }
+    
+}
+
+const insertSortRecursive2 = (arr, n) => {
+    if (n > 1) {
+        insertSortRecursive2(arr, n-1)
+    }
+}
