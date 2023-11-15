@@ -1,3 +1,3 @@
-const binarySearch = (arr, n) => {
-    
+const binarySearch = (arr, p, q, n) => {
+
 }
