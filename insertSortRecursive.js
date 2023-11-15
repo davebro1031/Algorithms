@@ -1,15 +1,24 @@
 const insert = (key, arr) => {
-    for(let i = 0; i < arr.length; i++){
-        if(key < arr[i]){
+    for (let i = 0; i < arr.length; i++) {
+        if (key < arr[i]) {
             temp = arr[i]
             arr[i] = key
             key = temp
         }
     }
     arr[arr.length] = key
+    return arr
 }
 
-let arr = [1,1,2,3,5,8,13,21]
-let key = 20
-insert(key, arr)
+const insertSortRecursive = (arr) => {
+    if (arr.length === 1) return arr
+    const n = arr.length
+    return insert(
+        arr[n - 1],
+        insertSortRecursive(arr.slice(0, n - 1))
+    )
+}
+
+let arr = [2, 5, 8, 1, 3, 5, 2, 4, 9, 2, 1]
+arr = insertSortRecursive(arr)
 console.log(arr)
