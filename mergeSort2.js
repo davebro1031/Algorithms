@@ -22,6 +22,7 @@ const mergeSort = (A, p, r) => {
     }
 }
 
-
+let arr = [0, 1, 2, 3, 4, 5, 6, 1, 3, 5, 10, 11, 12, 13, 14, 15]
+merge(arr, 3, 6, 9)
 
 console.log(arr)
