@@ -23,6 +23,8 @@ let arr = [2, 5, 8, 1, 3, 5, 2, 4, 9, 2, 1]
 // arr = insertSortRecursive(arr)
 console.log(arr)
 
+
+
 const insert2 = (arr, n) => {
     const key = arr[n]
     let j = n - 1
