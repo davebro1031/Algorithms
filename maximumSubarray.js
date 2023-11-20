@@ -32,3 +32,7 @@ maximumSubarray = (arr, p, r) => {
         return midSum
     }
 }
+
+const arr = [-1,2,3,-2,-4,5,8,11,-10,-10,-1,3,4]
+const result = maximumSubarray(arr, 0, arr.length-1)
+console.log(result)
