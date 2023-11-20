@@ -25,7 +25,7 @@ maximumSubarrayWithMid = (arr, p, q, r) => {
 }
 
 maximumSubarray = (arr, p, r) => {
-    console.log(p,r)
+    console.log(p, r)
     if (p === r) {
         return [p, r, arr[p]]
     } else {
@@ -40,6 +40,6 @@ maximumSubarray = (arr, p, r) => {
     }
 }
 
-const arr = [-1,2,3,-2,-4,5,8,-2,11,-10,-10,-1,3,4]
-const result = maximumSubarrayWithMid(arr, 0, Math.floor((arr.length-1)/2) ,arr.length-1)
+const arr = [-1, 2, 3, -2, -4, 5, 8, -2, 11, -10, -10, -1, 3, 4]
+const result = maximumSubarrayWithMid(arr, 0, Math.floor((arr.length - 1) / 2), arr.length - 1)
 console.log(result)
