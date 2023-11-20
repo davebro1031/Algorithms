@@ -23,7 +23,6 @@ maximumSubarrayWithMid = (arr, p, q, r) => {
 }
 
 maximumSubarray = (arr, p, r) => {
-    console.log(p, r)
     if (p === r) {
         return [p, r, arr[p]]
     } else {
