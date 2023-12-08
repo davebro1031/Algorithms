@@ -1,5 +1,6 @@
 
 const slidingWindowMax = (arr, W) => {
+    if(W===1) return arr
     // Initialize stack
     let stack = [{ val: arr[0], i: 0 }]
     for (let i = 1; i < W; i++) {
@@ -25,7 +26,7 @@ const slidingWindowMax = (arr, W) => {
     return result
 }
 
-const arr = [5,4,3,2,1,2,3,4,5,4,3,2,1,2,3,4,5]
-const W = 5
+const arr = [5,4,3,2,1]
+const W = 1
 const result = slidingWindowMax(arr, W)
 console.log(result)
