@@ -48,8 +48,6 @@ const slidingWindowMax = (arr, W) => {
 
     }
     return result
-
-
 }
 
 const arr = [6, 1, 9, 3, 1, 7, 2, 4, 5, 2]
