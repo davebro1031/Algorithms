@@ -101,7 +101,7 @@ const testPath = (str) => {
     return [x, y]
 }
 
-const coordinates = [-114, -319]
+const coordinates = [2, 9]
 const result = findPath(coordinates)
 console.log(result)
 const test = testPath(result)
