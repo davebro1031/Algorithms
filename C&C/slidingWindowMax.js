@@ -11,12 +11,21 @@ const slidingWindowMax = (arr, W) => {
 
     // loop through remainder of array to complete problem
     for (let i = W; i < arr.length; i++) {
+        // Update stack:  1) check if we have passed beyond first element
+        if(stack[0].i + W === i ) stack.shift()
+
+        // Update stack: 2) look at the current new array value and put it in the correct place
+        while (arr[i] >= stack[stack.length - 1]?.val) stack.pop()
+        stack.push({ val: arr[i], i })
+
+        // update result array with first stack element
+        result.push(stack[0].val)
 
     }
     return result
 }
 
-const arr = [5, 4, 3, 6, 4, 7, 8, 1, 4, 3, 2, 0]
+const arr = [1,2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2,1]
 const W = 5
 const result = slidingWindowMax(arr, W)
 console.log(result)
