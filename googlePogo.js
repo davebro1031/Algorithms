@@ -1,6 +1,7 @@
 
 const findPath = (coordinates) => {
-
+    let [x, y] = coordinates.split(" ")
+    return x*y
 }
 
 const coordinates = "3 -7"
