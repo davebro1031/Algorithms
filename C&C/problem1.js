@@ -9,13 +9,13 @@ var findWordsContaining = function(words, x) {
         for(let j of words[i]){
             if(j===x) {
                 result.push(i)
-                continue
+                break
             }
         }
     }
     return result
 };
 
-const words = ["abc","bcd","aaaa","cbc"], x = "z"
+const words = ["abc","bcd","aaaa","cbc"], x = "a"
 const result = findWordsContaining(words, x)
 console.log(result)
