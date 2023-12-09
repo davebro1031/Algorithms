@@ -16,6 +16,6 @@ var findWordsContaining = function(words, x) {
     return result
 };
 
-const words = ["abc","bcd","aaaa","cbc"], x = "a"
+const words = [], x = "o"
 const result = findWordsContaining(words, x)
 console.log(result)
