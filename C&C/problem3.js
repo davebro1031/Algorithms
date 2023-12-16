@@ -6,7 +6,7 @@ var minimumCoins = function(prices) {
     let totalCost = prices[0]
     for(let pi = 1; pi <= prices.length; pi++){
         let i = pi-1
-
+        // look into memoization 
     }
 };
 
