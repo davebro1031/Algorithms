@@ -24,8 +24,8 @@ const findPermsLen5 = (str) => {
         }
 
     }
-    console.log(perms)
-    return perms.length
+    // console.log(perms)
+    return perms
 }
 
 const findNonDistinctPermsLen5 = (str) => {
@@ -54,6 +54,30 @@ const findNonDistinctPermsLen5 = (str) => {
     return perms
 }
 
-const str = "ADDITION"
-const result = findNonDistinctPermsLen5(str)
+const findDoubleLetterPerms = (perms, letter) => {
+    let doubleLetterPerms = []
+    for (let word of perms) {
+        if (word.indexOf(letter, word.indexOf(letter) + 1) > 0) doubleLetterPerms.push(word)
+    }
+    // console.log(doubleLetterPerms)
+    return doubleLetterPerms
+}
+
+const findDoubleLetterStartPerms = (perms, letter) => {
+    let res = []
+    for (let word of perms){
+        if(word.indexOf(letter) === 0 && word.indexOf(letter, 1) === 1) res.push(word)
+    }
+    for(let word of res) console.log(word)
+    return res
+}
+
+const str = "MISSISSIPPI"
+const result = findPermsLen5(str)
 console.log(result.length)
+const res2 = findDoubleLetterPerms(result, "E")
+// const res3 = findDoubleLetterPerms(res2, "E")
+// const res4 = findDoubleLetterPerms(result, "I")
+// console.log(res2.filter(word => word.includes("I")).length)
+console.log(res2.length)
+// console.log(res3.length)
