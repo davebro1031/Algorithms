@@ -10,7 +10,7 @@ const parent = (i) => {
 
 
 
-const heapSize = 10
+let heapSize = 10
 
 const maxHeapify = (arr, i) => {
     let l = left(i)
@@ -58,6 +58,7 @@ const heapSort = (arr) => {
         let key = arr[0]
         arr[0] = arr[i]
         arr[i] = key
+        heapSize--
         maxHeapify(arr, 0)
     }
 }
@@ -71,5 +72,8 @@ const heap3 = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
 
 // console.log(heap, heap2)
 
-buildMaxHeap(heap3)
+// buildMaxHeap(heap3)
+// console.log(heap3)
+
+heapSort(heap3)
 console.log(heap3)
