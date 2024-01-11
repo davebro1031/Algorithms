@@ -22,10 +22,11 @@ const maxHeapify = (arr, i) => {
     let key = arr[i]
     arr[i] = arr[largest]
     arr[largest] = key
+    console.log(arr)
     maxHeapify(arr, largest)
 }
 
 const heap = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
 
-maxHeapify(heap, heapSize)
+maxHeapify(heap, 1)
 console.log(heap)
