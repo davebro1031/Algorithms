@@ -27,13 +27,13 @@ const maxHeapify = (arr, i) => {
 
 const maxHeapifyLoop = (arr, i) => {
     let j = i
-    let l = left(j)-1
-    let r = right(j)-1
+    let l = left(j) - 1
+    let r = right(j) - 1
     let largest = j
     if (l <= heapSize && arr[l] > arr[j]) largest = j
     if (r <= heapSize && arr[r] > arr[largest]) largest = r
     while (j < largest) {
-        
+
         let key = arr[largest]
         arr[largest] = arr[j]
         arr[j] = key
@@ -48,9 +48,18 @@ const maxHeapifyLoop = (arr, i) => {
 
 }
 
+const buildMaxHeap = (arr) => {
+    for (i = Math.floor(arr.length / 2) - 1; i >= 0; i--) maxHeapify(arr, i)
+}
+
 const heap = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
 const heap2 = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
+const heap3 = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
 
-maxHeapifyLoop(heap, 1)
-maxHeapify(heap2, 1)
-console.log(heap, heap2)
+// maxHeapifyLoop(heap, 1)
+// maxHeapify(heap2, 1)
+
+// console.log(heap, heap2)
+
+buildMaxHeap(heap3)
+console.log(heap3)
