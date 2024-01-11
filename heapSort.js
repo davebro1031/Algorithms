@@ -52,6 +52,16 @@ const buildMaxHeap = (arr) => {
     for (i = Math.floor(arr.length / 2) - 1; i >= 0; i--) maxHeapify(arr, i)
 }
 
+const heapSort = (arr) => {
+    buildMaxHeap(arr)
+    for(let i = arr.length - 1; i >= 1; i--){
+        let key = arr[0]
+        arr[0] = arr[i]
+        arr[i] = key
+        maxHeapify(arr, 0)
+    }
+}
+
 const heap = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
 const heap2 = [16, 4, 10, 14, 7, 9, 3, 2, 8, 1]
 const heap3 = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
