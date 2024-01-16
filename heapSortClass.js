@@ -36,20 +36,15 @@ class maxHeap {
 
 const heapSort = (a) => {
     a.build()
-    console.log(a)
     for (let i = a.length - 1; i >= 1; i--) {
         let key = a.heap[0]
         a.heap[0] = a.heap[i]
         a.heap[i] = key
-
         a.heapsize--
-        console.log(a)
-
         a.heapify(0)
-        console.log(a)
     }
 }
 
 var heap = new maxHeap([4, 1, 3, 2, 16, 9, 10, 14, 8, 7])
 heapSort(heap)
-console.log(heap)
+console.log(heap.heap)
