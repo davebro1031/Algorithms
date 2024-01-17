@@ -15,12 +15,10 @@ class maxHeap {
         if (l <= this.heapsize && this.heap[l] > this.heap[j]) largest = l
         if (r <= this.heapsize && this.heap[r] > this.heap[largest]) largest = r
         while (j < largest) {
-
             let key = this.heap[largest]
             this.heap[largest] = this.heap[j]
             this.heap[j] = key
             j = largest
-
 
             let l = this.left(j)
             let r = this.right(j)
